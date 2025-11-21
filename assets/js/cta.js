@@ -1,128 +1,46 @@
+/**
+ * CTA Section JavaScript
+ */
+
 document.addEventListener('DOMContentLoaded', function() {
-    // Create floating sparkles
+    
     const sparklesContainer = document.getElementById('sparklesContainer');
+    const button = document.querySelector('.cta-button');
+    const section = document.querySelector('.cta-section');
     
-    if (!sparklesContainer) return; // Exit if elements don't exist
-    
-    function createSparkles() {
-        for (let i = 0; i < 40; i++) {
-            const sparkle = document.createElement('div');
-            sparkle.className = 'sparkle';
-            sparkle.style.left = Math.random() * 100 + '%';
-            sparkle.style.top = Math.random() * 100 + '%';
-            sparkle.style.animationDelay = Math.random() * 4 + 's';
-            sparkle.style.animationDuration = (3 + Math.random() * 3) + 's';
-            
-            sparkle.innerHTML = '✨';
-            sparklesContainer.appendChild(sparkle);
-        }
+    if (!sparklesContainer || !button || !section) return;
+
+    // Create 30 floating sparkles
+    for (let i = 0; i < 30; i++) {
+        const sparkle = document.createElement('div');
+        sparkle.className = 'sparkle';
+        sparkle.style.left = Math.random() * 100 + '%';
+        sparkle.style.top = Math.random() * 100 + '%';
+        sparkle.style.animationDelay = Math.random() * 3 + 's';
+        sparkle.style.animationDuration = (2 + Math.random() * 3) + 's';
+        
+        sparkle.innerHTML = `
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2v20M2 12h20M6.34 6.34l11.32 11.32M6.34 17.66L17.66 6.34"/>
+            </svg>
+        `;
+        
+        sparklesContainer.appendChild(sparkle);
     }
-
-    createSparkles();
-
-    // Create floating particles
-    const particlesContainer = document.getElementById('particlesContainer');
-    
-    function createParticles() {
-        for (let i = 0; i < 25; i++) {
-            const particle = document.createElement('div');
-            particle.className = 'particle';
-            particle.style.left = Math.random() * 100 + '%';
-            particle.style.top = Math.random() * 100 + '%';
-            particle.style.animationDelay = Math.random() * 10 + 's';
-            particle.style.animationDuration = (15 + Math.random() * 10) + 's';
-            
-            particlesContainer.appendChild(particle);
-        }
-    }
-
-    createParticles();
-
-    // Form submission
-    const form = document.getElementById('ctaForm');
-    const submitBtn = form.querySelector('.submit-btn');
-    
-    form.addEventListener('submit', async function(e) {
-        e.preventDefault();
-        
-        // Loading state
-        submitBtn.classList.add('loading');
-        submitBtn.textContent = '';
-        
-        // Simulate API call
-        await new Promise(resolve => setTimeout(resolve, 1500));
-        
-        // Success state
-        submitBtn.classList.remove('loading');
-        submitBtn.classList.add('success');
-        submitBtn.textContent = '✓ Message Sent!';
-        
-        // Reset form
-        setTimeout(() => {
-            submitBtn.classList.remove('success');
-            submitBtn.textContent = 'Submit';
-            form.reset();
-        }, 3000);
-    });
-
-    // Input animations
-    const inputs = document.querySelectorAll('.form-input');
-    
-    inputs.forEach(input => {
-        input.addEventListener('focus', function() {
-            this.parentElement.style.transform = 'translateY(-2px)';
-        });
-        
-        input.addEventListener('blur', function() {
-            this.parentElement.style.transform = '';
-        });
-
-        // Bounce on first click
-        input.addEventListener('click', function() {
-            this.style.animation = 'none';
-            setTimeout(() => {
-                this.style.animation = '';
-            }, 10);
-        });
-    });
-
-    // Mouse parallax
-    const section = document.querySelector('.elite-cta-section');
-    const icons = document.querySelectorAll('.bouncing-icon');
-    const blobs = document.querySelectorAll('.gradient-blob');
-
-    section.addEventListener('mousemove', (e) => {
-        const rect = section.getBoundingClientRect();
-        const x = (e.clientX - rect.left) / rect.width - 0.5;
-        const y = (e.clientY - rect.top) / rect.height - 0.5;
-
-        icons.forEach((icon, index) => {
-            const speed = (index + 1) * 25;
-            icon.style.transform += ` translate(${x * speed}px, ${y * speed}px)`;
-        });
-
-        blobs.forEach((blob, index) => {
-            const speed = (index + 1) * 15;
-            const currentTransform = getComputedStyle(blob).transform;
-            blob.style.transform = `${currentTransform} translate(${x * speed}px, ${y * speed}px)`;
-        });
-    });
 
     // Button ripple effect
-    submitBtn.addEventListener('click', function(e) {
-        if (this.classList.contains('loading') || this.classList.contains('success')) return;
-        
+    button.addEventListener('click', function(e) {
         const ripple = document.createElement('div');
         ripple.style.position = 'absolute';
         ripple.style.borderRadius = '50%';
-        ripple.style.background = 'rgba(255, 255, 255, 0.5)';
-        ripple.style.width = '30px';
-        ripple.style.height = '30px';
+        ripple.style.background = 'rgba(37, 99, 235, 0.4)';
+        ripple.style.width = '20px';
+        ripple.style.height = '20px';
         ripple.style.pointerEvents = 'none';
         
         const rect = this.getBoundingClientRect();
-        ripple.style.left = (e.clientX - rect.left - 15) + 'px';
-        ripple.style.top = (e.clientY - rect.top - 15) + 'px';
+        ripple.style.left = (e.clientX - rect.left - 10) + 'px';
+        ripple.style.top = (e.clientY - rect.top - 10) + 'px';
         
         this.appendChild(ripple);
         
@@ -130,11 +48,32 @@ document.addEventListener('DOMContentLoaded', function() {
             { transform: 'scale(1)', opacity: 1 },
             { transform: 'scale(20)', opacity: 0 }
         ], {
-            duration: 700,
+            duration: 600,
             easing: 'ease-out'
         });
         
-        setTimeout(() => ripple.remove(), 700);
+        setTimeout(() => ripple.remove(), 600);
+    });
+
+    // Mouse parallax
+    const floatingIcons = document.querySelectorAll('.floating-icon');
+    const blobs = document.querySelectorAll('.gradient-blob');
+
+    section.addEventListener('mousemove', (e) => {
+        const rect = section.getBoundingClientRect();
+        const x = (e.clientX - rect.left) / rect.width - 0.5;
+        const y = (e.clientY - rect.top) / rect.height - 0.5;
+
+        floatingIcons.forEach((icon, index) => {
+            const speed = (index + 1) * 20;
+            icon.style.transform = `translateY(-50%) translate(${x * speed}px, ${y * speed}px)`;
+        });
+
+        blobs.forEach((blob, index) => {
+            const speed = (index + 1) * 10;
+            const currentTransform = window.getComputedStyle(blob).transform;
+            blob.style.transform = `${currentTransform} translate(${x * speed}px, ${y * speed}px)`;
+        });
     });
 
     // Continuous sparkle generation
@@ -144,12 +83,25 @@ document.addEventListener('DOMContentLoaded', function() {
             sparkle.className = 'sparkle';
             sparkle.style.left = Math.random() * 100 + '%';
             sparkle.style.top = Math.random() * 100 + '%';
-            sparkle.style.animationDuration = (3 + Math.random() * 3) + 's';
-            sparkle.innerHTML = '✨';
+            sparkle.style.animationDuration = (2 + Math.random() * 3) + 's';
+            
+            sparkle.innerHTML = `
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 2v20M2 12h20M6.34 6.34l11.32 11.32M6.34 17.66L17.66 6.34"/>
+                </svg>
+            `;
             
             sparklesContainer.appendChild(sparkle);
-            
-            setTimeout(() => sparkle.remove(), 6000);
+            setTimeout(() => sparkle.remove(), 5000);
         }
-    }, 2500);
+    }, 2000);
+
+    // Button hover
+    button.addEventListener('mouseenter', function() {
+        this.style.transform = 'scale(1.08)';
+    });
+
+    button.addEventListener('mouseleave', function() {
+        this.style.transform = 'scale(1)';
+    });
 });

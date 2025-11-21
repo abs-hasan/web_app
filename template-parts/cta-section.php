@@ -1,80 +1,40 @@
-<section class="elite-cta-section">
-    <!-- Animated Background Elements -->
-    <div class="gradient-blob blob-1"></div>
-    <div class="gradient-blob blob-2"></div>
-    <div class="gradient-blob blob-3"></div>
+<section class="cta-section">
+    <!-- Animated Gradient Blobs -->
+    <div class="gradient-blob blob-blue"></div>
+    <div class="gradient-blob blob-purple"></div>
 
-    <!-- Wave Pulses -->
-    <div class="wave-pulses">
-        <div class="wave-ring"></div>
-        <div class="wave-ring"></div>
-        <div class="wave-ring"></div>
+    <!-- Floating Sparkles -->
+    <div class="sparkles-container" id="sparklesContainer"></div>
+
+    <!-- Radial Pulse Waves -->
+    <div class="pulse-container">
+        <div class="pulse-ring"></div>
+        <div class="pulse-ring"></div>
+        <div class="pulse-ring"></div>
     </div>
 
-    <!-- Grid Overlay -->
-    <div class="grid-overlay"></div>
+    <!-- Floating Side Icons -->
+    <div class="floating-icon icon-left">🚀</div>
+    <div class="floating-icon icon-right">💼</div>
 
-    <!-- Sparkles Container -->
-    <div class="sparkles" id="sparklesContainer"></div>
+    <!-- Content -->
+    <div class="cta-content">
+        <h2 class="cta-title fade-in fade-in-delay-1">
+            Ready to Grow Your Business?
+        </h2>
 
-    <!-- Particles Container -->
-    <div class="particles" id="particlesContainer"></div>
+        <p class="cta-description fade-in fade-in-delay-2">
+            Book a free strategy call and get a clear, simple plan to improve your marketing, 
+            website and online presence.
+        </p>
 
-    <!-- Bouncing Icons -->
-    <!-- Icons removed for cleaner design -->
-
-    <!-- Main Content -->
-    <div class="cta-container">
-        <!-- Left Content -->
-        <div class="cta-left">
-            <div class="cta-badge">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
-                </svg>
-                Let's Grow Together
-            </div>
-
-            <h2 class="cta-title">
-                Let's get started growing the revenue from your digital marketing.
-            </h2>
-
-            <p class="cta-description">
-                Get a comprehensive digital marketing audit plus a 30 minute consultation 
-                with an award-winning strategist.
-            </p>
-        </div>
-
-        <!-- Right Form -->
-        <div class="cta-form-container">
-            <form id="ctaForm">
-                <div class="form-row">
-                    <div class="form-group">
-                        <input type="text" class="form-input" placeholder="First Name" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" class="form-input" placeholder="Last Name" required>
-                    </div>
-                </div>
-
-                <div class="form-row">
-                    <div class="form-group">
-                        <input type="email" class="form-input" placeholder="Your Email" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="tel" class="form-input" placeholder="Your Phone" required>
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <input type="text" class="form-input" placeholder="Website or Business Name">
-                </div>
-
-                <div class="form-group">
-                    <textarea class="form-input" placeholder="How can we help?" required></textarea>
-                </div>
-
-                <button type="submit" class="submit-btn">Submit</button>
-            </form>
+        <div class="fade-in fade-in-delay-3">
+            <a href="#contact" class="cta-button">
+                <div class="button-shine"></div>
+                <div class="button-glow"></div>
+                <span class="calendar-icon">📅</span>
+                <span style="position: relative; z-index: 1;">Book a Free Strategy Call</span>
+            </a>
         </div>
     </div>
 </section>
