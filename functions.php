@@ -15,6 +15,9 @@ if (!defined('ABSPATH')) {
  * Enqueue Styles and Scripts
  */
 function toppage_enqueue_assets() {
+    // this is the hero
+    wp_enqueue_style('toppage-hero', get_template_directory_uri() . '/assets/css/hero-section.css', array(), '1.0.0');
+
     // Main theme stylesheet (required by WordPress)
     wp_enqueue_style('toppage-style', get_stylesheet_uri(), array(), '1.0.0');
     
@@ -26,6 +29,9 @@ function toppage_enqueue_assets() {
     
     // Services Section styles ← NEW
     wp_enqueue_style('toppage-services', get_template_directory_uri() . '/assets/css/services-section.css', array(), '1.0.0');
+    
+    // Why Choose Section styles
+    wp_enqueue_style('toppage-why-choose', get_template_directory_uri() . '/assets/css/why-choose.css', array(), '1.0.0');
     
     // Work Process Section styles
     wp_enqueue_style('toppage-work-process', get_template_directory_uri() . '/assets/css/work-process.css', array(), '1.0.0');
@@ -41,6 +47,9 @@ function toppage_enqueue_assets() {
     
     // Services JavaScript ← NEW
     wp_enqueue_script('toppage-services-js', get_template_directory_uri() . '/assets/js/services-section.js', array(), '1.0.0', true);
+    
+    // Why Choose JavaScript
+    wp_enqueue_script('toppage-why-choose-js', get_template_directory_uri() . '/assets/js/why-choose.js', array(), '1.0.0', true);
     
     // Work Process JavaScript
     wp_enqueue_script('toppage-work-process-js', get_template_directory_uri() . '/assets/js/work-process.js', array(), '1.0.0', true);
