@@ -1,0 +1,141 @@
+/* ===================================
+   MAIN GLOBAL STYLES
+   =================================== */
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Site Wrapper */
+.site-wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.site-content {
+    flex: 1;
+    padding-top: 100px; /* Space for fixed navbar */
+}
+
+/* Body Styles */
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    margin: 0;
+    background: #f8f9fa;
+    padding-top: 120px;  /*Space for fixed navbar */
+    color: #0D1B2A;
+    line-height: 1.6;
+}
+
+/* Container */
+.container {
+    max-width: 1800px;
+    margin: 0 auto;
+    padding: 0 60px;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    color: #0D1B2A;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+h1 { font-size: 3rem; }
+h2 { font-size: 2.5rem; }
+h3 { font-size: 2rem; }
+h4 { font-size: 1.5rem; }
+h5 { font-size: 1.25rem; }
+h6 { font-size: 1rem; }
+
+/* Paragraphs */
+p {
+    margin-bottom: 1rem;
+    font-size: 1.05rem;
+}
+
+/* Links */
+a {
+    color: #1E5EFF;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    color: #0D1B2A;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 14px 32px;
+    background: linear-gradient(135deg, #1E5EFF, #0D1B2A);
+    color: white;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1rem;
+    text-decoration: none;
+    box-shadow: 0 4px 15px rgba(30, 94, 255, 0.3);
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 25px rgba(30, 94, 255, 0.5);
+    color: white;
+}
+
+.btn-secondary {
+    background: white;
+    color: #1E5EFF;
+    border: 2px solid #1E5EFF;
+}
+
+.btn-secondary:hover {
+    background: #1E5EFF;
+    color: white;
+}
+
+/* Sections */
+section {
+    padding: 80px 0;
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+    .container {
+        padding: 0 30px;
+    }
+    
+    h1 { font-size: 2.5rem; }
+    h2 { font-size: 2rem; }
+    h3 { font-size: 1.75rem; }
+    
+    section {
+        padding: 60px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 20px;
+    }
+    
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.75rem; }
+    h3 { font-size: 1.5rem; }
+    
+    section {
+        padding: 40px 0;
+    }
+}

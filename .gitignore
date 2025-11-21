@@ -1,0 +1,95 @@
+# WordPress Core Files
+/wp-admin/
+/wp-includes/
+/wp-content/*
+!/wp-content/themes/
+/wp-content/themes/*
+!/wp-content/themes/TOPPAGEAI/
+
+# WordPress Config
+wp-config.php
+wp-config-local.php
+wp-config-sample.php
+
+# Database Files
+*.sql
+*.sql.gz
+*.mysql
+
+# Log Files
+*.log
+error_log
+debug.log
+php_errors.log
+
+# OS Generated Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+Thumbs.db:encryptable
+Desktop.ini
+ehthumbs.db
+ehthumbs_vista.db
+
+# Editor/IDE Files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+.code-workspace
+*.swp
+*.swo
+*~
+
+# Node Modules (if you add build tools later)
+node_modules/
+npm-debug.log
+yarn-error.log
+yarn-debug.log
+package-lock.json
+yarn.lock
+
+# Temporary Files
+*.tmp
+*.temp
+*.cache
+
+# Upload Directory
+/wp-content/uploads/
+
+# Backup Files
+*.bak
+*.backup
+*-backup/
+backup/
+backups/
+
+# Environment Files
+.env
+.env.local
+.env.production
+.env.development
+
+# Cache
+.cache/
+cache/
+
+# Compiled Files (uncomment if using build tools)
+# *.min.css
+# *.min.js
+# /dist/
+# /build/
+
+# Version Control
+.svn/
+.git/
+.gitattributes
+
+# Other
+*.zip
+*.tar
+*.gz
+*.rar
