@@ -1,9 +1,13 @@
-/* CTA Section - Ultimate Version */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+/* ===================================
+   CTA SECTION - BRAND UPDATED
+   Cyber Teal gradient with animations
+   =================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600;700&display=swap');
 
 .cta-section {
     position: relative;
-    background: linear-gradient(135deg, #2563eb 0%, #4f46e5 50%, #7c3aed 100%);
+    background: linear-gradient(135deg, #00B8D9 0%, #007BFF 50%, #0A1A2F 100%);
     padding: 100px 40px;
     overflow: hidden;
     border-radius: 0;
@@ -25,7 +29,7 @@
     height: 384px;
     top: 0;
     left: 0;
-    background: #60a5fa;
+    background: #00D4FF;
     animation: blobMove1 20s linear infinite;
 }
 
@@ -40,7 +44,7 @@
     height: 384px;
     bottom: 0;
     right: 0;
-    background: #c084fc;
+    background: #007BFF;
     animation: blobMove2 25s linear infinite;
 }
 
@@ -132,6 +136,7 @@
 
 /* Title with Glow */
 .cta-title {
+    font-family: 'Poppins', sans-serif;
     font-size: clamp(2rem, 5vw, 3.2rem);
     font-weight: 700;
     color: white;
@@ -139,6 +144,7 @@
     line-height: 1.2;
     text-shadow: 0 0 40px rgba(255, 255, 255, 0.3);
     animation: titleGlow 2s ease-in-out infinite;
+    letter-spacing: -0.02em;
 }
 
 @keyframes titleGlow {
@@ -151,8 +157,9 @@
 }
 
 .cta-description {
+    font-family: 'Open Sans', sans-serif;
     font-size: clamp(1rem, 2vw, 1.25rem);
-    color: #bfdbfe;
+    color: rgba(255, 255, 255, 0.9);
     line-height: 1.7;
     margin-bottom: 40px;
     max-width: 700px;
@@ -167,7 +174,8 @@
     gap: 12px;
     padding: 20px 45px;
     background: white;
-    color: #2563eb;
+    color: #00B8D9;
+    font-family: 'Poppins', sans-serif;
     font-size: 1.05rem;
     font-weight: 600;
     border: none;
@@ -184,7 +192,7 @@
 .button-shine {
     position: absolute;
     inset: 0;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    background: linear-gradient(90deg, transparent, rgba(0, 184, 217, 0.3), transparent);
     transform: translateX(-200%);
     animation: shine 3s infinite;
 }
@@ -213,6 +221,7 @@
 
 .cta-button:hover {
     transform: scale(1.08);
+    box-shadow: 0 25px 70px rgba(0, 0, 0, 0.4);
 }
 
 .cta-button:active {
@@ -290,7 +299,9 @@
     }
 }
 
-/* Responsive */
+/* ===================================
+   RESPONSIVE
+   =================================== */
 @media (max-width: 768px) {
     .cta-section {
         padding: 60px 30px;
@@ -318,5 +329,33 @@
     .gradient-blob {
         width: 250px !important;
         height: 250px !important;
+    }
+
+    .cta-button {
+        padding: 18px 36px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .cta-section {
+        padding: 50px 20px;
+    }
+
+    .cta-title {
+        font-size: 1.75rem;
+    }
+
+    .cta-description {
+        font-size: 0.95rem;
+    }
+
+    .floating-icon {
+        display: none;
+    }
+
+    .cta-button {
+        width: 100%;
+        justify-content: center;
     }
 }
