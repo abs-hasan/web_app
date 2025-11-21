@@ -24,7 +24,13 @@ function toppage_enqueue_assets() {
     // Navbar styles
     wp_enqueue_style('toppage-navbar', get_template_directory_uri() . '/assets/css/navbar.css', array(), '1.0.0');
     
-    // CTA Section styles ← ADD THIS LINE
+    // Services Section styles ← NEW
+    wp_enqueue_style('toppage-services', get_template_directory_uri() . '/assets/css/services-section.css', array(), '1.0.0');
+    
+    // Work Process Section styles
+    wp_enqueue_style('toppage-work-process', get_template_directory_uri() . '/assets/css/work-process.css', array(), '1.0.0');
+    
+    // CTA Section styles
     wp_enqueue_style('toppage-cta', get_template_directory_uri() . '/assets/css/cta.css', array(), '1.0.0');
     
     // Footer styles
@@ -33,23 +39,17 @@ function toppage_enqueue_assets() {
     // Navbar JavaScript
     wp_enqueue_script('toppage-navbar-js', get_template_directory_uri() . '/assets/js/navbar.js', array(), '1.0.0', true);
     
-    // CTA JavaScript (already there ✓)
+    // Services JavaScript ← NEW
+    wp_enqueue_script('toppage-services-js', get_template_directory_uri() . '/assets/js/services-section.js', array(), '1.0.0', true);
+    
+    // Work Process JavaScript
+    wp_enqueue_script('toppage-work-process-js', get_template_directory_uri() . '/assets/js/work-process.js', array(), '1.0.0', true);
+    
+    // CTA JavaScript
     wp_enqueue_script('toppage-cta-js', get_template_directory_uri() . '/assets/js/cta.js', array(), '1.0.0', true);
 
     // Footer JavaScript
     wp_enqueue_script('toppage-footer-js', get_template_directory_uri() . '/assets/js/footer.js', array(), '1.0.0', true);
-
-
-
-        // Work Process Section styles
-    wp_enqueue_style('toppage-work-process', get_template_directory_uri() . '/assets/css/work-process.css', array(), '1.0.0');
-
-    // Work Process JavaScript
-    wp_enqueue_script('toppage-work-process-js', get_template_directory_uri() . '/assets/js/work-process.js', array(), '1.0.0', true);
-
-
-    wp_enqueue_style('toppage-services', get_template_directory_uri() . '/assets/css/services-section.css', array(), '1.0.0');
-    wp_enqueue_script('toppage-services-js', get_template_directory_uri() . '/assets/js/services-section.js', array(), '1.0.0', true);
 }
 
 add_action('wp_enqueue_scripts', 'toppage_enqueue_assets');
