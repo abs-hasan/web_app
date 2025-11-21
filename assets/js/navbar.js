@@ -1,15 +1,35 @@
 /**
- * Navbar JavaScript
- * Handles mobile menu toggle, dropdowns, and smooth scrolling
+ * Navbar JavaScript - Brand Updated
+ * Handles mobile menu toggle, dropdowns, smooth scrolling, and scroll effects
  */
 
 document.addEventListener('DOMContentLoaded', function() {
     
-    // Mobile menu toggle
+    const navbar = document.getElementById('navbar');
     const mobileToggle = document.getElementById('mobileToggle');
     const navbarCenter = document.querySelector('.navbar-center');
-    const navbar = document.getElementById('navbar');
+    const servicesDropdown = document.getElementById('servicesDropdown');
 
+    // ===================================
+    // TRANSPARENT TO DARK ON SCROLL
+    // ===================================
+    function handleScroll() {
+        if (window.scrollY > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+    }
+
+    // Initial check
+    handleScroll();
+
+    // Listen to scroll
+    window.addEventListener('scroll', handleScroll);
+
+    // ===================================
+    // MOBILE MENU TOGGLE
+    // ===================================
     if (mobileToggle && navbarCenter) {
         mobileToggle.addEventListener('click', function() {
             mobileToggle.classList.toggle('active');
@@ -18,9 +38,9 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Mobile dropdown toggle
-    const servicesDropdown = document.getElementById('servicesDropdown');
-    
+    // ===================================
+    // MOBILE DROPDOWN TOGGLE
+    // ===================================
     if (servicesDropdown) {
         servicesDropdown.addEventListener('click', function(e) {
             if (window.innerWidth <= 968) {
@@ -30,7 +50,9 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Close mobile menu when clicking outside
+    // ===================================
+    // CLOSE MOBILE MENU WHEN CLICKING OUTSIDE
+    // ===================================
     document.addEventListener('click', function(e) {
         if (navbar && navbarCenter && !navbar.contains(e.target) && navbarCenter.classList.contains('active')) {
             mobileToggle.classList.remove('active');
@@ -39,7 +61,9 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Close mobile menu when clicking a link
+    // ===================================
+    // CLOSE MOBILE MENU WHEN CLICKING A LINK
+    // ===================================
     const menuLinks = document.querySelectorAll('.navbar-menu a:not(.has-dropdown > a)');
     menuLinks.forEach(function(link) {
         link.addEventListener('click', function() {
@@ -51,18 +75,110 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Smooth scroll for anchor links
+    // ===================================
+    // SMOOTH SCROLL FOR ANCHOR LINKS
+    // ===================================
     const anchorLinks = document.querySelectorAll('a[href^="#"]');
     anchorLinks.forEach(function(anchor) {
         anchor.addEventListener('click', function(e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
+            const href = this.getAttribute('href');
+            
+            // Skip if it's just "#" or empty
+            if (!href || href === '#' || href === '#!') {
+                return;
+            }
+
+            const target = document.querySelector(href);
             if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
+                e.preventDefault();
+                
+                // Calculate offset for fixed navbar
+                const navbarHeight = navbar.offsetHeight;
+                const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - navbarHeight;
+                
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
                 });
             }
         });
     });
+
+    // ===================================
+    // HIGHLIGHT ACTIVE SECTION ON SCROLL
+    // ===================================
+    function highlightActiveSection() {
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('.navbar-menu a[href^="#"]');
+        
+        let currentSection = '';
+        const scrollPos = window.scrollY + 200;
+
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.offsetHeight;
+            
+            if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
+                currentSection = section.getAttribute('id');
+            }
+        });
+
+        navLinks.forEach(link => {
+            const href = link.getAttribute('href');
+            if (href && href.includes('#')) {
+                const sectionId = href.split('#')[1];
+                
+                if (sectionId === currentSection) {
+                    link.style.color = '#00D4FF';
+                } else {
+                    link.style.color = '';
+                }
+            }
+        });
+    }
+
+    // Throttle scroll event for performance
+    let scrollTimeout;
+    window.addEventListener('scroll', function() {
+        if (scrollTimeout) {
+            window.cancelAnimationFrame(scrollTimeout);
+        }
+        scrollTimeout = window.requestAnimationFrame(function() {
+            highlightActiveSection();
+        });
+    });
+
+    // ===================================
+    // NAVBAR HIDE ON SCROLL DOWN, SHOW ON SCROLL UP
+    // ===================================
+    let lastScrollTop = 0;
+    const scrollThreshold = 10;
+
+    window.addEventListener('scroll', function() {
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        
+        if (Math.abs(scrollTop - lastScrollTop) < scrollThreshold) {
+            return;
+        }
+
+        if (scrollTop > lastScrollTop && scrollTop > 100) {
+            // Scrolling down
+            navbar.style.transform = 'translateY(-100%)';
+        } else {
+            // Scrolling up
+            navbar.style.transform = 'translateY(0)';
+        }
+        
+        lastScrollTop = scrollTop;
+    });
+
+    // ===================================
+    // PREVENT DROPDOWN FROM CLOSING ON CLICK INSIDE
+    // ===================================
+    const dropdownMenu = document.querySelector('.dropdown-menu');
+    if (dropdownMenu) {
+        dropdownMenu.addEventListener('click', function(e) {
+            e.stopPropagation();
+        });
+    }
 });

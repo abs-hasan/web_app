@@ -1,10 +1,15 @@
-/* Services Section - The Value We Provide */
+/* ===================================
+   SERVICES SECTION - BRAND UPDATED
+   Dark section with Cyber Teal accents
+   =================================== */
+
+/* Services Section */
 .services-section {
     position: relative;
     padding: 120px 20px;
     min-height: 100vh;
     overflow: hidden;
-    background: #0b0b0b;
+    background: #0A1A2F;
 }
 
 /* Noise Texture Overlay */
@@ -28,9 +33,9 @@
     left: -10%;
     width: 120%;
     height: 200%;
-    background: radial-gradient(circle at 30% 40%, rgba(138, 43, 226, 0.15) 0%, transparent 50%),
-                radial-gradient(circle at 70% 60%, rgba(75, 0, 130, 0.12) 0%, transparent 50%),
-                radial-gradient(circle at 50% 50%, rgba(123, 104, 238, 0.08) 0%, transparent 60%);
+    background: radial-gradient(circle at 30% 40%, rgba(0, 184, 217, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 70% 60%, rgba(0, 123, 255, 0.12) 0%, transparent 50%),
+                radial-gradient(circle at 50% 50%, rgba(0, 212, 255, 0.08) 0%, transparent 60%);
     filter: blur(80px);
     animation: nebulaPulse 20s ease-in-out infinite;
     pointer-events: none;
@@ -61,7 +66,7 @@
     height: 300px;
     top: 10%;
     left: 10%;
-    background: radial-gradient(circle, rgba(147, 51, 234, 0.4), transparent);
+    background: radial-gradient(circle, rgba(0, 184, 217, 0.4), transparent);
     animation: float1 25s ease-in-out infinite;
 }
 
@@ -70,7 +75,7 @@
     height: 400px;
     top: 60%;
     right: 10%;
-    background: radial-gradient(circle, rgba(79, 70, 229, 0.3), transparent);
+    background: radial-gradient(circle, rgba(0, 123, 255, 0.3), transparent);
     animation: float2 30s ease-in-out infinite;
 }
 
@@ -79,7 +84,7 @@
     height: 250px;
     bottom: 20%;
     left: 50%;
-    background: radial-gradient(circle, rgba(139, 92, 246, 0.35), transparent);
+    background: radial-gradient(circle, rgba(0, 212, 255, 0.35), transparent);
     animation: float3 20s ease-in-out infinite;
 }
 
@@ -121,7 +126,7 @@
     height: 80px;
     top: 15%;
     right: 15%;
-    background: linear-gradient(135deg, #8b5cf6, #6366f1);
+    background: linear-gradient(135deg, #00B8D9, #00D4FF);
     border-radius: 20px;
     animation-delay: 0s;
     transform-style: preserve-3d;
@@ -132,7 +137,7 @@
     height: 60px;
     top: 70%;
     left: 10%;
-    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    background: linear-gradient(135deg, #00D4FF, #00B8D9);
     border-radius: 50%;
     animation-delay: 2s;
 }
@@ -142,7 +147,7 @@
     height: 100px;
     bottom: 10%;
     right: 20%;
-    background: linear-gradient(135deg, #7c3aed, #4f46e5);
+    background: linear-gradient(135deg, #007BFF, #00B8D9);
     clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
     animation-delay: 4s;
 }
@@ -163,7 +168,9 @@
     z-index: 10;
 }
 
-/* Heading Block */
+/* ===================================
+   HEADING BLOCK
+   =================================== */
 .services-heading-block {
     text-align: center;
     margin-bottom: 80px;
@@ -180,6 +187,7 @@
 }
 
 .services-title-main {
+    font-family: 'Poppins', sans-serif;
     font-size: clamp(3rem, 8vw, 6rem);
     font-weight: 800;
     color: #ffffff;
@@ -187,7 +195,7 @@
     opacity: 0;
     transform: translateX(-40px);
     animation: slideInLeft 1s cubic-bezier(0.16, 1, 0.3, 1) 0.2s forwards;
-    text-shadow: 0 0 40px rgba(138, 43, 226, 0.3);
+    text-shadow: 0 0 40px rgba(0, 184, 217, 0.3);
 }
 
 @keyframes slideInLeft {
@@ -203,7 +211,7 @@
     height: 60px;
     position: relative;
     animation: rotateStar 10s linear infinite;
-    filter: drop-shadow(0 0 20px rgba(138, 43, 226, 0.8));
+    filter: drop-shadow(0 0 20px rgba(0, 184, 217, 0.8));
 }
 
 .services-star-icon::before,
@@ -214,11 +222,11 @@
     left: 50%;
     width: 100%;
     height: 8px;
-    background: linear-gradient(90deg, #8b5cf6, #a855f7);
+    background: linear-gradient(90deg, #00B8D9, #00D4FF);
     border-radius: 4px;
     transform: translate(-50%, -50%);
-    box-shadow: 0 0 30px rgba(138, 43, 226, 0.8),
-                0 0 60px rgba(138, 43, 226, 0.4);
+    box-shadow: 0 0 30px rgba(0, 184, 217, 0.8),
+                0 0 60px rgba(0, 184, 217, 0.4);
 }
 
 .services-star-icon::after {
@@ -232,9 +240,10 @@
 }
 
 .services-title-gradient {
+    font-family: 'Poppins', sans-serif;
     font-size: clamp(3rem, 8vw, 6rem);
     font-weight: 800;
-    background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #a855f7 100%);
+    background: linear-gradient(135deg, #00B8D9 0%, #00D4FF 50%, #007BFF 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -252,7 +261,7 @@
     left: 0;
     right: 0;
     height: 4px;
-    background: linear-gradient(90deg, transparent, #8b5cf6, transparent);
+    background: linear-gradient(90deg, transparent, #00B8D9, transparent);
     border-radius: 2px;
     animation: shimmer 3s ease-in-out infinite;
 }
@@ -270,8 +279,9 @@
 }
 
 .services-subtitle {
+    font-family: 'Open Sans', sans-serif;
     font-size: clamp(1rem, 2vw, 1.25rem);
-    color: rgba(255, 255, 255, 0.6);
+    color: rgba(255, 255, 255, 0.7);
     max-width: 600px;
     margin: 30px auto 0;
     line-height: 1.8;
@@ -287,7 +297,9 @@
     }
 }
 
-/* Services Grid */
+/* ===================================
+   SERVICES GRID
+   =================================== */
 .services-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -295,15 +307,17 @@
     perspective: 1000px;
 }
 
-/* Service Card */
+/* ===================================
+   SERVICE CARD
+   =================================== */
 .service-card {
     position: relative;
-    background: linear-gradient(135deg, rgba(30, 30, 35, 0.9) 0%, rgba(20, 20, 25, 0.95) 100%);
+    background: linear-gradient(135deg, rgba(15, 31, 51, 0.9) 0%, rgba(10, 26, 47, 0.95) 100%);
     border-radius: 32px;
     padding: 45px 35px;
-    border: 1px solid rgba(139, 92, 246, 0.2);
+    border: 1px solid rgba(0, 184, 217, 0.2);
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5),
-                0 0 0 1px rgba(139, 92, 246, 0.1),
+                0 0 0 1px rgba(0, 184, 217, 0.1),
                 inset 0 1px 0 rgba(255, 255, 255, 0.05);
     opacity: 0;
     transform: translateY(40px) scale(0.94);
@@ -337,7 +351,7 @@
     bottom: 0;
     border-radius: 32px;
     padding: 2px;
-    background: linear-gradient(135deg, rgba(139, 92, 246, 0.4), rgba(99, 102, 241, 0.4));
+    background: linear-gradient(135deg, rgba(0, 184, 217, 0.4), rgba(0, 123, 255, 0.4));
     -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
     mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;
@@ -358,7 +372,7 @@
     left: -50%;
     width: 200%;
     height: 200%;
-    background: radial-gradient(circle, rgba(139, 92, 246, 0.1) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(0, 184, 217, 0.1) 0%, transparent 70%);
     opacity: 0;
     transition: opacity 0.4s ease;
     pointer-events: none;
@@ -370,13 +384,15 @@
 
 .service-card:hover {
     transform: translateY(-12px) scale(1);
-    box-shadow: 0 30px 80px rgba(139, 92, 246, 0.3),
-                0 0 0 1px rgba(139, 92, 246, 0.3),
+    box-shadow: 0 30px 80px rgba(0, 184, 217, 0.3),
+                0 0 0 1px rgba(0, 184, 217, 0.3),
                 inset 0 1px 0 rgba(255, 255, 255, 0.1);
-    border-color: rgba(139, 92, 246, 0.4);
+    border-color: rgba(0, 184, 217, 0.4);
 }
 
-/* Icon Badge */
+/* ===================================
+   ICON BADGE
+   =================================== */
 .service-icon-badge {
     position: absolute;
     top: -20px;
@@ -388,8 +404,8 @@
     align-items: center;
     justify-content: center;
     font-size: 2rem;
-    box-shadow: 0 10px 30px rgba(139, 92, 246, 0.4),
-                0 0 0 8px rgba(11, 11, 11, 0.8);
+    box-shadow: 0 10px 30px rgba(0, 184, 217, 0.4),
+                0 0 0 8px rgba(10, 26, 47, 0.8);
     transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
     z-index: 10;
 }
@@ -400,31 +416,34 @@
 
 /* Unique gradient colors for each service */
 .service-card:nth-child(1) .service-icon-badge {
-    background: linear-gradient(135deg, #00ff88, #00d4ff);
+    background: linear-gradient(135deg, #00B8D9, #00D4FF);
 }
 
 .service-card:nth-child(2) .service-icon-badge {
-    background: linear-gradient(135deg, #ff0088, #ff00ff);
+    background: linear-gradient(135deg, #007BFF, #00B8D9);
 }
 
 .service-card:nth-child(3) .service-icon-badge {
-    background: linear-gradient(135deg, #ffaa00, #ff6b00);
+    background: linear-gradient(135deg, #00D4FF, #007BFF);
 }
 
 .service-card:nth-child(4) .service-icon-badge {
-    background: linear-gradient(135deg, #0066ff, #00d4ff);
+    background: linear-gradient(135deg, #00B8D9, #007BFF);
 }
 
 .service-card:nth-child(5) .service-icon-badge {
-    background: linear-gradient(135deg, #a855f7, #ec4899);
+    background: linear-gradient(135deg, #00D4FF, #00B8D9);
 }
 
 .service-card:nth-child(6) .service-icon-badge {
-    background: linear-gradient(135deg, #10b981, #06b6d4);
+    background: linear-gradient(135deg, #007BFF, #00D4FF);
 }
 
-/* Card Title */
+/* ===================================
+   CARD CONTENT
+   =================================== */
 .service-card-title {
+    font-family: 'Poppins', sans-serif;
     font-size: 1.75rem;
     font-weight: 700;
     color: #ffffff;
@@ -438,8 +457,8 @@
     transform: translateX(4px);
 }
 
-/* Card Description */
 .service-card-description {
+    font-family: 'Open Sans', sans-serif;
     font-size: 1rem;
     color: rgba(255, 255, 255, 0.6);
     margin-bottom: 25px;
@@ -453,7 +472,9 @@
     margin-bottom: 12px;
 }
 
-/* Sub-services */
+/* ===================================
+   SUB-SERVICES
+   =================================== */
 .service-sub-list {
     list-style: none;
     margin-top: 20px;
@@ -469,6 +490,7 @@
 }
 
 .service-sub-item {
+    font-family: 'Open Sans', sans-serif;
     font-size: 0.95rem;
     color: rgba(255, 255, 255, 0.7);
     padding-left: 30px;
@@ -519,9 +541,9 @@
     top: 8px;
     width: 16px;
     height: 16px;
-    background: linear-gradient(135deg, #8b5cf6, #6366f1);
+    background: linear-gradient(135deg, #00B8D9, #00D4FF);
     border-radius: 4px;
-    box-shadow: 0 0 10px rgba(139, 92, 246, 0.5);
+    box-shadow: 0 0 10px rgba(0, 184, 217, 0.5);
     transition: transform 0.3s ease;
 }
 
@@ -536,13 +558,15 @@
     right: -30px;
     width: 150px;
     height: 150px;
-    background: radial-gradient(circle, rgba(139, 92, 246, 0.15), transparent);
+    background: radial-gradient(circle, rgba(0, 184, 217, 0.15), transparent);
     border-radius: 50%;
     filter: blur(40px);
     pointer-events: none;
 }
 
-/* Responsive */
+/* ===================================
+   RESPONSIVE
+   =================================== */
 @media (max-width: 1200px) {
     .services-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -581,11 +605,6 @@
         height: 60px;
         font-size: 1.5rem;
     }
-}
-
-/* Parallax on Scroll */
-.parallax-element-services {
-    transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 /* Mouse Parallax Effect */
