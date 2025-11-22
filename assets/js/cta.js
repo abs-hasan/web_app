@@ -104,4 +104,35 @@ document.addEventListener('DOMContentLoaded', function() {
     button.addEventListener('mouseleave', function() {
         this.style.transform = 'scale(1)';
     });
+
+    // Modal open/close for CTA form
+    const modal = document.getElementById('cta-modal');
+    const openTriggers = document.querySelectorAll('[data-open-cta-modal]');
+    const closeTriggers = document.querySelectorAll('[data-close-cta-modal]');
+
+    function openModal() {
+        if (!modal) return;
+        modal.classList.add('is-open');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+        if (!modal) return;
+        modal.classList.remove('is-open');
+        document.body.style.overflow = '';
+    }
+
+    openTriggers.forEach(trigger => {
+        trigger.addEventListener('click', openModal);
+    });
+
+    closeTriggers.forEach(trigger => {
+        trigger.addEventListener('click', closeModal);
+    });
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            closeModal();
+        }
+    });
 });

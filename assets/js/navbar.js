@@ -148,29 +148,11 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // ===================================
-    // NAVBAR HIDE ON SCROLL DOWN, SHOW ON SCROLL UP
-    // ===================================
-    let lastScrollTop = 0;
-    const scrollThreshold = 10;
-
-    window.addEventListener('scroll', function() {
-        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        
-        if (Math.abs(scrollTop - lastScrollTop) < scrollThreshold) {
-            return;
-        }
-
-        if (scrollTop > lastScrollTop && scrollTop > 100) {
-            // Scrolling down
-            navbar.style.transform = 'translateY(-100%)';
-        } else {
-            // Scrolling up
-            navbar.style.transform = 'translateY(0)';
-        }
-        
-        lastScrollTop = scrollTop;
-    });
+    // NAVBAR ALWAYS VISIBLE (disable hide-on-scroll)
+    // Remove any transform so it stays in place even if previous logic set it
+    if (navbar) {
+        navbar.style.transform = 'translateY(0)';
+    }
 
     // ===================================
     // PREVENT DROPDOWN FROM CLOSING ON CLICK INSIDE

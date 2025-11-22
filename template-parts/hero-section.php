@@ -6,7 +6,8 @@
         <!-- Content Card -->
         <div class="content-card">
             <h1 class="hero-headline">
-                Growth-Driven Marketing, Delivered by Experts Who Get Results
+                Growth-Driven Marketing,<br>
+                Delivered by Experts Who Get Results
             </h1>
             
             <p class="hero-subtext">
