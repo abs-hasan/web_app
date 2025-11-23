@@ -1,25 +1,9 @@
 <section class="services-section">
-    <!-- Animated Background -->
-    <div class="nebula-bg-services"></div>
-    
-    <!-- Floating Orbs -->
-    <div class="floating-orb-services orb-services-1"></div>
-    <div class="floating-orb-services orb-services-2"></div>
-    <div class="floating-orb-services orb-services-3"></div>
-
-    <!-- Floating 3D Shapes -->
-    <div class="floating-shapes-services">
-        <div class="shape-services shape-services-1"></div>
-        <div class="shape-services shape-services-2"></div>
-        <div class="shape-services shape-services-3"></div>
-    </div>
-
     <div class="container">
         <!-- Heading Block -->
         <div class="services-heading-block">
             <div class="services-title-wrapper">
                 <h2 class="services-title-main">The Value</h2>
-                <div class="services-star-icon"></div>
                 <h2 class="services-title-gradient">We Provide</h2>
             </div>
             <p class="services-subtitle">
@@ -30,100 +14,94 @@
         <!-- Services Grid -->
         <div class="services-grid">
             
-            <!-- Service 1: SEO -->
+            <!-- Service 1: SEO & Content Marketing -->
             <div class="service-card" data-card="1">
                 <div class="service-icon-badge">🔍</div>
                 <div class="card-content">
-                    <h3 class="service-card-title">SEO Services</h3>
-                    <p class="service-card-description">Search engine optimization powered by AI algorithms</p>
+                    <h3 class="service-card-title">SEO & Content Marketing</h3>
+                    <p class="service-card-description">Drive organic traffic and establish thought leadership with our comprehensive SEO and content strategies.</p>
                     <ul class="service-sub-list">
-                        <li class="service-sub-item">Technical SEO</li>
-                        <li class="service-sub-item">On-page Optimization</li>
-                        <li class="service-sub-item">Link Building</li>
-                        <li class="service-sub-item">Local SEO</li>
+                        <li class="service-sub-item">Technical SEO Optimization</li>
+                        <li class="service-sub-item">Content Strategy & Creation</li>
+                        <li class="service-sub-item">Link Building Campaigns</li>
+                        <li class="service-sub-item">Local SEO & GMB</li>
                     </ul>
                 </div>
-                <div class="service-card-decoration"></div>
             </div>
 
-            <!-- Service 2: Paid Ads -->
+            <!-- Service 2: Paid Advertising (PPC) -->
             <div class="service-card" data-card="2">
                 <div class="service-icon-badge">📊</div>
                 <div class="card-content">
-                    <h3 class="service-card-title">Paid Advertising</h3>
-                    <p class="service-card-description">AI-optimized advertising campaigns across platforms</p>
+                    <h3 class="service-card-title">Paid Advertising (PPC)</h3>
+                    <p class="service-card-description">Maximize your ROI with precisely targeted campaigns across Google Ads, social media, and other platforms.</p>
                     <ul class="service-sub-list">
-                        <li class="service-sub-item">Google Ads</li>
-                        <li class="service-sub-item">Meta Ads</li>
+                        <li class="service-sub-item">Google Ads Management</li>
+                        <li class="service-sub-item">Meta Ads (Facebook & Instagram)</li>
+                        <li class="service-sub-item">LinkedIn Advertising</li>
                         <li class="service-sub-item">TikTok Ads</li>
-                        <li class="service-sub-item">LinkedIn Ads</li>
                     </ul>
                 </div>
-                <div class="service-card-decoration"></div>
             </div>
 
-            <!-- Service 3: Social Media -->
+            <!-- Service 3: Website Design & Development -->
             <div class="service-card" data-card="3">
-                <div class="service-icon-badge">📱</div>
-                <div class="card-content">
-                    <h3 class="service-card-title">Social Media Marketing</h3>
-                    <p class="service-card-description">Strategic social presence with AI content generation</p>
-                    <ul class="service-sub-list">
-                        <li class="service-sub-item">Content Strategy</li>
-                        <li class="service-sub-item">Community Management</li>
-                        <li class="service-sub-item">Influencer Marketing</li>
-                        <li class="service-sub-item">Analytics & Reporting</li>
-                    </ul>
-                </div>
-                <div class="service-card-decoration"></div>
-            </div>
-
-            <!-- Service 4: Automation -->
-            <div class="service-card" data-card="4">
-                <div class="service-icon-badge">🤖</div>
-                <div class="card-content">
-                    <h3 class="service-card-title">Marketing Automation</h3>
-                    <p class="service-card-description">Intelligent workflow automation and AI integration</p>
-                    <ul class="service-sub-list">
-                        <li class="service-sub-item">Marketing Automation</li>
-                        <li class="service-sub-item">Chatbot Development</li>
-                        <li class="service-sub-item">Email Sequences</li>
-                        <li class="service-sub-item">Lead Nurturing</li>
-                    </ul>
-                </div>
-                <div class="service-card-decoration"></div>
-            </div>
-
-            <!-- Service 5: Design -->
-            <div class="service-card" data-card="5">
-                <div class="service-icon-badge">🎨</div>
-                <div class="card-content">
-                    <h3 class="service-card-title">Design Services</h3>
-                    <p class="service-card-description">AI-enhanced creative design and brand identity</p>
-                    <ul class="service-sub-list">
-                        <li class="service-sub-item">Brand Identity</li>
-                        <li class="service-sub-item">UI/UX Design</li>
-                        <li class="service-sub-item">Graphic Design</li>
-                        <li class="service-sub-item">Motion Graphics</li>
-                    </ul>
-                </div>
-                <div class="service-card-decoration"></div>
-            </div>
-
-            <!-- Service 6: Web Development -->
-            <div class="service-card" data-card="6">
                 <div class="service-icon-badge">💻</div>
                 <div class="card-content">
-                    <h3 class="service-card-title">Web Development</h3>
-                    <p class="service-card-description">Modern web solutions with AI capabilities</p>
+                    <h3 class="service-card-title">Website Design & Development</h3>
+                    <p class="service-card-description">Create engaging, high-converting websites that reflect your brand and deliver exceptional user experiences.</p>
                     <ul class="service-sub-list">
-                        <li class="service-sub-item">Custom Websites</li>
-                        <li class="service-sub-item">E-commerce Stores</li>
-                        <li class="service-sub-item">Web Applications</li>
-                        <li class="service-sub-item">API Integration</li>
+                        <li class="service-sub-item">Custom Website Design</li>
+                        <li class="service-sub-item">E-commerce Development</li>
+                        <li class="service-sub-item">Landing Page Optimization</li>
+                        <li class="service-sub-item">WordPress & CMS Solutions</li>
                     </ul>
                 </div>
-                <div class="service-card-decoration"></div>
+            </div>
+
+            <!-- Service 4: Social Media Management -->
+            <div class="service-card" data-card="4">
+                <div class="service-icon-badge">📱</div>
+                <div class="card-content">
+                    <h3 class="service-card-title">Social Media Management</h3>
+                    <p class="service-card-description">Build strong brand presence and engage your audience effectively with strategic social media campaigns.</p>
+                    <ul class="service-sub-list">
+                        <li class="service-sub-item">Content Strategy & Planning</li>
+                        <li class="service-sub-item">Community Management</li>
+                        <li class="service-sub-item">Influencer Partnerships</li>
+                        <li class="service-sub-item">Social Analytics</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Service 5: Email Marketing Automation -->
+            <div class="service-card" data-card="5">
+                <div class="service-icon-badge">✉️</div>
+                <div class="card-content">
+                    <h3 class="service-card-title">Email Marketing Automation</h3>
+                    <p class="service-card-description">Nurture leads and drive customer loyalty with automated, personalized email sequences and campaigns.</p>
+                    <ul class="service-sub-list">
+                        <li class="service-sub-item">Email Campaign Design</li>
+                        <li class="service-sub-item">Marketing Automation</li>
+                        <li class="service-sub-item">Lead Nurturing Sequences</li>
+                        <li class="service-sub-item">A/B Testing & Optimization</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Service 6: Analytics & Reporting -->
+            <div class="service-card" data-card="6">
+                <div class="service-icon-badge">📈</div>
+                <div class="card-content">
+                    <h3 class="service-card-title">Analytics & Reporting</h3>
+                    <p class="service-card-description">Gain clear insights into your marketing performance with detailed reports and data-driven recommendations.</p>
+                    <ul class="service-sub-list">
+                        <li class="service-sub-item">Google Analytics Setup</li>
+                        <li class="service-sub-item">Custom Dashboard Creation</li>
+                        <li class="service-sub-item">Performance Tracking</li>
+                        <li class="service-sub-item">ROI Analysis</li>
+                    </ul>
+                </div>
             </div>
 
         </div>

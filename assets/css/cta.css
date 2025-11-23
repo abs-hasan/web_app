@@ -7,12 +7,13 @@
 
 .cta-section {
     position: relative;
-    background: linear-gradient(135deg, #f36a2d 0%, #f58a3c 40%, #16a6a9 100%);
+    background: linear-gradient(135deg, #ff7c36 0%, #ff9a4d 45%, #16a6a9 100%);
     padding: clamp(70px, 9vw, 110px) clamp(24px, 6vw, 50px);
     overflow: hidden;
-    border-radius: 0;
-    max-width: 100%;
-    margin: 0 auto;
+    border-radius: 28px;
+    max-width: 1200px;
+    margin: clamp(60px, 8vw, 100px) auto;
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.18);
 }
 
 /* Animated Gradient Blobs */

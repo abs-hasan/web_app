@@ -17,7 +17,9 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(card);
     });
 
-    // Mouse Parallax Effect for Cards
+    // Mouse Parallax Effect for Cards - DISABLED to prevent jitter
+    // Keeping code commented out in case needed later
+    /*
     document.querySelectorAll('.service-card').forEach(card => {
         card.addEventListener('mousemove', (e) => {
             const rect = card.getBoundingClientRect();
@@ -37,8 +39,10 @@ document.addEventListener('DOMContentLoaded', function() {
             card.style.transform = '';
         });
     });
+    */
 
-    // Parallax Scroll Effect for Background Elements
+    // Parallax Scroll Effect for Background Elements - DISABLED (no background elements)
+    /*
     let lastScrollY = window.scrollY;
     
     window.addEventListener('scroll', () => {
@@ -57,8 +61,10 @@ document.addEventListener('DOMContentLoaded', function() {
         
         lastScrollY = scrollY;
     });
+    */
 
-    // Enhanced Card Hover Glow
+    // Enhanced Card Hover Glow - DISABLED to prevent jitter
+    /*
     document.querySelectorAll('.service-card').forEach(card => {
         card.addEventListener('mouseenter', function() {
             this.style.setProperty('--glow-opacity', '1');
@@ -68,8 +74,10 @@ document.addEventListener('DOMContentLoaded', function() {
             this.style.setProperty('--glow-opacity', '0');
         });
     });
+    */
 
-    // Floating Animation for Icon Badges
+    // Floating Animation for Icon Badges - DISABLED to prevent movement
+    /*
     document.querySelectorAll('.service-icon-badge').forEach((badge, index) => {
         let offset = index * 0.5;
         setInterval(() => {
@@ -78,8 +86,10 @@ document.addEventListener('DOMContentLoaded', function() {
             badge.style.transform = `translateY(${Math.sin(Date.now() / 1000 + offset) * 5}px) rotate(${rotation}deg)`;
         }, 50);
     });
+    */
 
-    // Gradient Animation for Title
+    // Gradient Animation for Title - REMOVED - No color animation wanted
+    /*
     let hue = 0;
     setInterval(() => {
         hue = (hue + 1) % 360;
@@ -87,4 +97,5 @@ document.addEventListener('DOMContentLoaded', function() {
             el.style.filter = `hue-rotate(${hue * 0.2}deg)`;
         });
     }, 50);
+    */
 });

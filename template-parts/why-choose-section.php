@@ -1,89 +1,50 @@
-<!-- Floating Dots -->
-<div class="floating-dots">
-    <div class="dot"></div>
-    <div class="dot"></div>
-    <div class="dot"></div>
-    <div class="dot"></div>
-    <div class="dot"></div>
-    <div class="dot"></div>
-    <div class="dot"></div>
-    <div class="dot"></div>
-</div>
-
 <section class="why-section">
     <div class="container">
-        <h2 class="section-title">Why Businesses Choose TopPageAI</h2>
-
-        <!-- Connecting Lines (Desktop) -->
-        <div class="connector-line line-1"></div>
-        <div class="connector-line line-2"></div>
-        <div class="connector-line line-3"></div>
+        <div class="section-header">
+            <h2 class="section-title">Why Businesses Choose TopPageAI</h2>
+            <p class="section-subtitle">Our integrated approach focuses on transparency, results, and a seamless client experience.</p>
+        </div>
 
         <div class="features-grid">
-            <!-- Feature 1 -->
-            <div class="feature-item">
-                <div class="icon-container">
-                    <div class="icon-ring-outer"></div>
-                    <div class="icon-ring-inner"></div>
-                    <div class="icon-border"></div>
-                    <div class="icon-circle">
-                        <svg class="icon-svg" viewBox="0 0 24 24">
-                            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
-                        </svg>
-                    </div>
+            <!-- Feature 1: Data-driven marketing -->
+            <div class="feature-card">
+                <div class="icon-wrapper">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                    </svg>
                 </div>
                 <h3 class="feature-title">Data-driven marketing</h3>
                 <p class="feature-description">Every decision backed by analytics.</p>
             </div>
 
-            <!-- Feature 2 -->
-            <div class="feature-item">
-                <div class="icon-container">
-                    <div class="icon-ring-outer"></div>
-                    <div class="icon-ring-inner"></div>
-                    <div class="icon-border"></div>
-                    <div class="icon-circle">
-                        <svg class="icon-svg" viewBox="0 0 24 24">
-                            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
-                            <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
-                        </svg>
-                    </div>
+            <!-- Feature 2: Full-service support -->
+            <div class="feature-card">
+                <div class="icon-wrapper">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 4h5v8l-2.5-1.5L6 12V4z"/>
+                    </svg>
                 </div>
                 <h3 class="feature-title">Full-service support</h3>
                 <p class="feature-description">SEO, ads, social, content & websites in one place.</p>
             </div>
 
-            <!-- Feature 3 -->
-            <div class="feature-item">
-                <div class="icon-container">
-                    <div class="icon-ring-outer"></div>
-                    <div class="icon-ring-inner"></div>
-                    <div class="icon-border"></div>
-                    <div class="icon-circle">
-                        <svg class="icon-svg" viewBox="0 0 24 24">
-                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                            <polyline points="14 2 14 8 20 8"></polyline>
-                            <line x1="16" y1="13" x2="8" y2="13"></line>
-                            <line x1="16" y1="17" x2="8" y2="17"></line>
-                            <polyline points="10 9 9 9 8 9"></polyline>
-                        </svg>
-                    </div>
+            <!-- Feature 3: Clear reporting -->
+            <div class="feature-card">
+                <div class="icon-wrapper">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/>
+                    </svg>
                 </div>
                 <h3 class="feature-title">Clear reporting</h3>
                 <p class="feature-description">Know exactly where your results come from.</p>
             </div>
 
-            <!-- Feature 4 -->
-            <div class="feature-item">
-                <div class="icon-container">
-                    <div class="icon-ring-outer"></div>
-                    <div class="icon-ring-inner"></div>
-                    <div class="icon-border"></div>
-                    <div class="icon-circle">
-                        <svg class="icon-svg" viewBox="0 0 24 24">
-                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
-                        </svg>
-                    </div>
+            <!-- Feature 4: Modern, simple communication -->
+            <div class="feature-card">
+                <div class="icon-wrapper">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"/>
+                    </svg>
                 </div>
                 <h3 class="feature-title">Modern, simple communication</h3>
                 <p class="feature-description">No jargon — just real results.</p>

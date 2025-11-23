@@ -5,8 +5,8 @@
 
 /* Footer */
 .footer {
-    background: linear-gradient(180deg, #0f1b2c 0%, #1a2130 100%);
-    color: #ffffff;
+    background: #5fcfe3;
+    color: #152435;
     position: relative;
     overflow: hidden;
 }
@@ -24,9 +24,9 @@
 
 /* Top section with newsletter */
 .footer-top {
-    background: linear-gradient(135deg, #f36a2d 0%, #16a6a9 100%);
+    background: transparent;
     padding: clamp(50px, 6vw, 80px) clamp(30px, 6vw, 60px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
     position: relative;
 }
 
@@ -139,6 +139,7 @@
 .footer-main {
     padding: clamp(50px, 6vw, 80px) clamp(30px, 6vw, 60px) clamp(40px, 5vw, 60px);
     background: transparent;
+    color: #152435;
 }
 
 .footer-main-container {

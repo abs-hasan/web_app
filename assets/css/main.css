@@ -10,18 +10,18 @@
    =================================== */
 :root {
     /* Primary Brand Colors */
-    --deep-space-blue: #1f2430; /* headlines */
-    --cyber-teal: #16a6a9;      /* primary accent (teal) */
+    --deep-space-blue: #0a1a2f; /* headlines & paragraph text */
+    --cyber-teal: #5bc6ea;      /* primary accent (logo, buttons, headlines) */
     --pure-white: #ffffff;
-    --accent-coral: #f36a2d;    /* secondary accent (orange) */
+    --accent-coral: #f58a1f;    /* secondary accent (orange) */
     
     /* Secondary Colors */
-    --slate-gray: #5a606e;      /* body copy */
-    --electric-blue: #107f83;   /* primary hover/deep */
+    --slate-gray: #4f5a67;      /* body copy */
+    --electric-blue: #0f9a71;   /* primary hover/deep */
     
     /* Light Backgrounds */
-    --light-gray: #f9f3ef;
-    --very-light-gray: #f4ede8;
+    --light-gray: #f7f9fb;
+    --very-light-gray: #eef2f6;
     
     /* Typography */
     --font-primary: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
